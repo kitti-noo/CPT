@@ -1,22 +1,12 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 int main ()
 {
 	int i,ans,num;
 	printf("---NUM FOR FUN 0-99---\n");
-	printf("Ans : ");
-	scanf("%d",&ans);
-	do
-	{
-		if(ans>=0 && ans<=99)
-		{
-			break;
-		}
-		else
-		{
-			printf("Please enter again\n");	
-		}
-	}while(1);
-
+	srand(time(NULL));
+	ans = rand()%100;
 	for(i=0;i<10;i++)
 	{
 		printf("\n");
@@ -58,5 +48,6 @@ int main ()
 	
 		}
 	}
+	printf("Answer : %d",ans);
 	return 0;
 }
